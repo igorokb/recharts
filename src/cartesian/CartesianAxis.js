@@ -409,7 +409,7 @@ class CartesianAxis extends Component {
           {tick && this.renderTickItem(
             tick,
             tickProps,
-            `${_.isFunction(tickFormatter) ? tickFormatter(entry.value) : entry.value}${unit || ''}`
+            _.isFunction(tickFormatter) ? tickFormatter(entry.value) : `${entry.value}${unit || ''}`
           )}
         </Layer>
       );
